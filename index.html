@@ -1,0 +1,77 @@
+<html>
+<head>
+  <script type="text/javascript">
+    function apply() {
+      var source = ["name", "part", "position", "tel", "fax", "email"];
+      source.forEach(function(s) {
+        console.log(s);
+        document.getElementById(s + '-t').innerHTML = document.getElementById(s).value;
+      });
+      document.getElementById("email-t").href = "mailto:" + document.getElementById("email").value;
+    }
+  </script>
+</head>
+<body onLoad="apply()">
+  <p>
+    이름: <input type="text" id="name" value="유용우" /><br/>
+    부서: <input type="text" id="part" value="R&D 그룹 CX 서비스실" /><br/>
+    직책: <input type="text" id="position" value="부서원"/><br/>
+    T: <input type="text" id="tel" value="010-0000-0000" /><br/>
+    F: <input type="text" id="fax" value="02-558-0000"/><br/>
+    E: <input type="text" id="email" value="yowu@yanolja.com"/><br/>
+    <button onClick="apply()">적용</button>
+  </p>
+  <hr />
+  <table cellspacing="0" cellpadding="0" width="720" style="font-family:arial;font-size:8pt">
+    <tbody>
+      <tr>
+        <td style="width:125px;height:80px;text-align:center">
+          <a href="http://www.yanolja.com/" style="display:block;outline:none;border:0px" target="_blank">
+            <img src="http://image2.yanolja.com/mailing/20161122/logo_pink.png" alt="야놀자" style="display:inline-block;margin:21px 0px;width:110px;height:45px;outline:none;border:0px">
+          </a>
+        </td>
+        <td>
+          <p style="margin:5px 0px 0px;padding:0px">
+            <b style="padding-right:5px;font-size:8pt;color:rgb(255,52,120);letter-spacing:1px">(주)야놀자</b>
+            <span style="padding-right:5px;letter-spacing:1px;">
+              <b id="name-t"></b>
+            </span>
+            <span style="padding-right:5px;color:rgb(114,114,114);letter-spacing:1px;">
+              <b id="part-t"></b>
+              <b id="position-t" style="padding-left:5px;"></b>
+            </span>
+          </p>
+
+          <p style="margin:3px 0px 0px;padding:0px">
+            <b style="font-size:12px;color:rgb(68,68,68)">
+              <span style="font-size:8pt">T.</span>
+            </b>
+            <span style="padding-left:5px;margin:0px;color:rgb(68,68,68);font-family:arial" id="tel-t"></span>
+            <b style="padding-left:10px;font-size:12px;color:rgb(68,68,68)">
+              <span style="font-size:8pt">F.</span>
+            </b>
+            <span style="padding-left:5px;color:rgb(68,68,68);font-family:arial" id="fax-t"></span>
+            <span style="padding-left:10px;font-size:12px;color:rgb(68,68,68)">
+              <span style="font-size:8pt"><b>E.</b>
+                <a href="mailto:" style="color:rgb(17,85,204);padding-left:5px;" target="_blank" id="email-t"></a>
+              </span>
+            </span>
+          </p>
+          <p style="margin:3px 0px 0px;padding:0px;font-size:12px;color:rgb(68,68,68)">
+            <span style="font-size:8pt">(06159)&nbsp;
+              <a href="https://www.google.com/maps?q=서울+강남구+테헤란로+427" style="color:rgb(17,85,204)" target="_blank">서울 강남구 테헤란로 427</a>&nbsp;야놀자타워
+            </span>
+          </p>
+          <p style="margin:10px 0px 0px;padding:0px">
+            <a href="http://www.yanolja.com/" style="color:rgb(132,132,132);font-family:dotum,돋움;font-size:11px;text-decoration-line:none" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=ko&amp;q=http://yanolja.in/&amp;source=gmail&amp;ust=1518090571201000&amp;usg=AFQjCNE9j7TTmMynsOeMzxjFW8I2yXMyIw">
+              <span style="font-size:8pt">www.yanolja.com</span>
+            </a>
+            <span style="display:inline-block;margin-left:15px;color:rgb(132,132,132);font-family:arial">숙박 서비스 | 로컬&amp;엔터테인먼트 | 프랜차이즈</span>
+          </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </body></html>
